@@ -22,6 +22,60 @@ pip install -r requirements.txt
 python setup.py build develop
 ```
 
+## Data Preparation
+
+### 3DMatch
+
+The dataset can be downloaded from [PREDATOR](https://github.com/prs-eth/OverlapPredator). The data should be organized as follows:
+
+```text
+--data--3DMatch--metadata
+              |--data--train--7-scenes-chess--cloud_bin_0.pth
+                    |      |               |--...
+                    |      |--...
+                    |--test--7-scenes-redkitchen--cloud_bin_0.pth
+                          |                    |--...
+                          |--...
+```
+
+### Kitti odometry
+
+Download the data from the [Kitti official website](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) into `data/Kitti` and run `data/Kitti/downsample_pcd.py` to generate the data. The data should be organized as follows:
+
+```text
+--data--Kitti--metadata
+            |--sequences--00--velodyne--000000.bin
+            |              |         |--...
+            |              |...
+            |--downsampled--00--000000.npy
+                         |   |--...
+```
+
+### ModelNet
+
+Download the [data](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip) and run `data/ModelNet/split_data.py` to generate the data. The data should be organized as follows:
+
+```text
+--data--ModelNet--modelnet_ply_hdf5_2048--...
+               |--train.pkl
+               |--val.pkl
+               |--test.pkl
+```
+
+### 4DMatch
+
+Download the [data](https://drive.google.com/file/d/1YoHWhVaH5Yyo1gTjybiuaODA1lZrM_nG/view?usp=sharing). The data should be organized as follows:
+
+```text
+--data--4DMatch
+               |--train--abe_CoverToStand--cam1_0000_cam2_0006.npz
+               |      |               |--...
+               |      |--...
+               |--test--amy_Situps--cam1_0000_cam2_0003.npz
+                      |                    |--...
+                      |--...
+```
+
 
 ## Citation
 
