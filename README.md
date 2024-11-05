@@ -15,7 +15,6 @@ Please use the following command for installation.
 # It is recommended to create a new environment
 conda create -n dms python==3.8
 conda activate dms
-
 pip install torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
 
 # Install packages and other dependencies
