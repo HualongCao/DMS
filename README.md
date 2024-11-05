@@ -1,4 +1,4 @@
-# DMS: Low-overlap Registration of 3D Point Clouds with Double-layer Multi-scale Star-graph
+# 📃 DMS: Low-overlap Registration of 3D Point Clouds with Double-layer Multi-scale Star-graph
 
 [DMS: Low-overlap Registration of 3D Point Clouds with Double-layer Multi-scale Star-graph](https://ieeexplore.ieee.org/document/10530423).
 
@@ -7,7 +7,12 @@
 ## Pipline
 ![](assets/pipline.png)
 
-## Installation
+# 🛠️ Setup
+The code has been tested on:
+
+- Ubuntu 20.04 LTS, Python 3.8.0, CUDA 11.6, torch1.7.1+cu110, GeForce RTX 3090
+
+## 💻 Installation
 
 Please use the following command for installation.
 
@@ -22,7 +27,7 @@ pip install -r requirements.txt
 python setup.py build develop
 ```
 
-## Data Preparation
+## 📦 Data Preparation
 
 ### 3DMatch
 
@@ -77,7 +82,7 @@ Download the [data](https://drive.google.com/file/d/1YoHWhVaH5Yyo1gTjybiuaODA1lZ
 ```
 
 
-## Citation
+## 🎓 Citation
 
 ```bibtex
 @ARTICLE{DMS,
@@ -93,7 +98,7 @@ Download the [data](https://drive.google.com/file/d/1YoHWhVaH5Yyo1gTjybiuaODA1lZ
 
 ```
 
-## Acknowledgements
+## ✏️ Acknowledgements
 
 - [GeoTransformer](https://github.com/qinzheng93/GeoTransformer)
 - [Maximal-Cliques](https://github.com/zhangxy0517/3D-Registration-with-Maximal-Cliques)
