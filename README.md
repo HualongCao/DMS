@@ -81,6 +81,27 @@ Download the [data](https://drive.google.com/file/d/1YoHWhVaH5Yyo1gTjybiuaODA1lZ
                       |--...
 ```
 
+## 🚀 Running
+
+### Training
+
+The code is in `experiments/exp`. Use the following command for training.
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python trainval.py
+```
+
+
+## Multi-GPU Training
+
+As the point clouds usually have different sizes, we organize them in the *pack* mode. This causes difficulty for batch training as we need to convert the data between *batch* mode and *pack* mode frequently. For this reason, we limit the batch size to 1 per GPU at this time and support batch training via `DistributedDataParallel`. Use `torch.distributed.launch` for multi-gpu training:
+
+```bash
+CUDA_VISIBLE_DEVICES=GPUS python -m torch.distributed.launch --nproc_per_node=NGPUS trainval.py
+```
+
+Note that the learning rate is multiplied by the number of GPUs by default as the batch size increased. In our experiments, multi-gpu training slightly improves the performance.
+
 
 ## 🎓 Citation
 
