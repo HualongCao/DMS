@@ -16,6 +16,11 @@ The code has been tested on:
 
 Please use the following command for installation.
 
+- Clone the repository 
+```
+git clone https://github.com/HualongCao/DMS && cd DMS
+```
+
 ```bash
 # It is recommended to create a new environment
 conda create -n dms python==3.8
